@@ -4,33 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle financeiro</title>
+    <link rel="shortcut icon" href="money.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Controle financeiro</h1>
         <p>Tenha suas finanças na palma da mão</p>
+         <img src="money.png" alt="">
     </header>
     <main>
         <section id="form">
-            <form>
+            <form autocomplete="off">
                 <p>
-                    <label for="">Descrição: </label>
-                    <input type="text" id="descricao">
+                    <label for="descricao">Descrição: </label>
+                    <input type="text" id="descricao" class="form">
                 </p>
                 <p> 
-                    <label for="">Valor: </label>
-                    <input type="number" id="valor">
+                    <label for="valor">Valor: </label>
+                    <input type="number" id="valor" class="form">
                 </p>
                 <p>
                     <label for="tipo">Tipo: </label>
-                    <select name="tipo" id="tipo">
+                    <select name="tipo" id="tipo" class="form">
                         <option value="" disabled selected>Selecione uma opção...</option>
                         <option value="entrada">Entrada</option>
                         <option value="despesa">Despesa</option>
                     </select>
                 </p>
-                <input type="submit"onclick="subirDados(event)" value="Adicionar" class="btn">
+                <input type="submit"onclick="subirDados(event)" value="Adicionar" id="btn-add">
             </form>
         </section>
 

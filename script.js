@@ -2,15 +2,18 @@ var dados = []
 
 function subirDados(event) {
     event.preventDefault()
-    var descricao = document.getElementById('descricao').value
-    var valor = document.getElementById('valor').value
-    var tipo = document.getElementById('tipo').value
+    var descricao = document.getElementById('descricao')
+    var valor = document.getElementById('valor')
+    var tipo = document.getElementById('tipo')
     var tabela = document.getElementById('tbody')
 
-    var novoDado = {
-        descricao: descricao,
-        valor: valor, 
-        tipo: tipo
+    if (descricao.value == "" || valor.value == "" || tipo.value == "") {
+        window.alert('Digite todas as informações necessárias')
+    } else {
+        var novoDado = {
+        descricao: descricao.value,
+        valor: valor.value, 
+        tipo: tipo.value
     }
 
     dados.push(novoDado)
@@ -24,7 +27,12 @@ function subirDados(event) {
     }
     
     tabela.appendChild(linha)
-    
+    }
+
+
+    descricao.value = "";
+    valor.value= ""
+    tipo.value= ""
 }
 
 function filtro() {
