@@ -5,13 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle financeiro</title>
     <link rel="shortcut icon" href="money.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons" />
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
 <body>
     <header>
         <h1>Controle financeiro</h1>
         <p>Tenha suas finanças na palma da mão</p>
-         <img src="money.png" alt="">
+        <img src="money.png" alt="">
+        <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
+        <menu id="menu">
+            <ul>
+                <li><a href="#form">Inicio</a></li>
+                <li><a href="#tabela">Finanças</a></li>
+                <li><a href="#res">Balanço</a></li>
+            </ul>
+        </menu>
     </header>
     <main>
         <section id="form">
